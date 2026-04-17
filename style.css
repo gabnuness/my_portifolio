@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C;
+    color: aliceblue;
+     font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+}
+
+#myname, #projectsName, #mensageFinal {
+    color: #d2e874;
+}
+
+
+.social-links a {
+    font-size: 30px; /* Tamanho do ícone */
+    margin-right: 15px; /* Espaço entre eles */
+    color: aliceblue; /* Cor padrão */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+img {
+    max-width: 400px;
+    max-height: 600px;
+    border-radius: 2rem;
+}
+
+.container {
+    display: flex;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
