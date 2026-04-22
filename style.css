@@ -39,6 +39,16 @@ img {
     margin-top: 40px;
 }
 
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+:hover {
+    text-decoration: underline;
+    color: #d2e874;
+}
+
 /*.box1 {
     margin-top: 20px;
     display: flex;
@@ -68,3 +78,12 @@ img {
     
 }
 
+container-final {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    left: auto;
+    right: auto;
+
+}
