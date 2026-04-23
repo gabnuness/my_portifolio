@@ -4,102 +4,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
+    <title>Gabriel Nunes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+
+    <!--Menu de navegação-->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#about">Sobre mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#education">Formação</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre mim</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#education">Formação</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header id="hero">
         <section class="hero-container">
-            <div class="hero-content">
-                <h1 id="mensageInicial">Nice to meet you, <br>I am <strong id="myname">Gabriel</strong></h1>
-                <p>Estudante de Ciências da Computação, completamente atraído por desenvolvimento de softwares e
-                    corridas no nascer do sol.</p>
+            <div class="hero-text reveal">
+                <p class="hero-greeting">Hello World!</p>
+                <h1>Nice to meet you,<br>I am <span class="accent-text">Gabriel</span></h1>
+                <p class="hero-sub">Estudante de Ciências da Computação, tenho uma enrome paixão por desenvolvimento de softwares e corridas no nascer do sol.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/_gabnunes._" target="_blank">
+                    <a href="https://www.instagram.com/_gabnunes._" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/gabrielnunes" target="_blank">
+                    <a href="https://www.linkedin.com/in/gabrielnunes" target="_blank" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="gabnunes.developer@gmail.com" target="_blank" c>
+                    <a href="mailto:gabnunes.developer@gmail.com" aria-label="Email">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
                 </div>
-                <img src="assets/1.jpeg" alt="Gabriel">
-                <img src="assets/2.jpeg" alt="Gabriel">
+                <a href="#projects" class="btn-cta">Ver projetos <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <div class="hero-images reveal reveal-delay">
+                <img src="assets/1.jpeg" alt="Gabriel em Toronto" class="img-main">
+                <img src="assets/2.jpeg" alt="Gabriel à noite" class="img-secondary">
             </div>
         </section>
     </header>
-    <main>
+
+    <!--Sobre mim-->
+    <section id="about">
+        <div class="about-container">
+
+            <div class="section-header reveal">
+                <!--<span class="section-tag">quem sou</span>-->
+                <h2>Sobre <span class="accent-text">mim</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Trabalho na empresa Disfonte, revendedora da Ambev como Técnico de Informática, sendo responsável pela infraestrutura da redes e computadores e suporte em alguns softwares. 
+                        Foi aqui que tive meu primeiro contato com a tecnologia ainda como jovem aprendiz, na qual decidi me destacar para poder retornar como efetivo.
+                        Sempre estou em busca de novos aprendizados para poder aplicar em nosso dia a dia.                     
+                    </p>
+                    <p>
+                        Gosto muito de aprender diversos conteúdos, culinária, psicologia, tecnologia, esportes, etc.
+                        Prezo muito pela simplicidade do nosso dia a dia, gosto de correr pela manhã, ler, programar algo para mim mesmo, e passar tempo com as pessoas.
+                        Tenho diversos sonhos e objetivos de conhecer muitos lugares onde posso me conectar comigo mesmo sem me preocupar com o amanhã. 
+                    </p>
+                </div>
+
+                <div class="about-skills reveal reveal-delay">
+                    <h4 class="skills-title">Tecnologias & Ferramentas</h4>
+                    <div class="skills-grid">
+                        <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML</span>
+                        <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                        <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                        <!--<span class="skill-badge"><i class="fa-brands fa-github"></i> GitHub</span>-->
+                        <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-badge">🐇 RabbitMQ</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Projetos-->
+    <main id="projects">
         <section class="container-projetos">
-            <h2 id="projectsName">Um pouco dos meus projetos</h2>
-            <!--Projeto1-->
-            <article class="box1">
-                <div class="projeto1">
-                    <img src="/assets/quiz.png" alt="Quiz para programadores com HTML e CSS">
-                    <h3><a href="https://github.com/gabnuness/Quiz-para-Progamadores"
-                            target="_blank">https://github.com/gabnuness/Quiz-para-Progamadores</a></h3>
-                    <p>Site criado com os primeiros conhecimentos de HTML e CSS, desenvolvimento durante uma aula no
-                        Youtube do canal da Rafaella Ballerini.</p>
-                </div>
-            </article>
+            <div class="section-header reveal">
+                <!--<span class="section-tag">portfólio</span>-->
+                <h2>Um pouco dos meus <span class="accent-text">projetos</span></h2>
+                <p class="section-sub">Coisas que construí aprendendo e explorando.</p>
+            </div>
 
-            <!--Projeto2-->
-            <article class="box2">
-                <div>
-                    <img src="assets/rabbitmq.png" alt="RabbitMQ">
-                    <h3><a href="https://github.com/gabnuness/Mensageria-RabbitMQ" target="_blank">Sistema de
-                            Notificação com RabbitMQ</a></h3>
-                    <p>Conhecendo a ferramenta RabbitMQ, criei um sistema de notificação assíncrona entre o produtor e o
-                        consumidor.</p>
-                </div>
-            </article>
+            <div class="projects-grid">
 
-            <!--Projeto3-->
-            <article class="box3">
-                <div>
-                    <img src="" alt="Currículo HTML">
-                    <h3><a href="https://github.com/gabnuness/Curriculo-em-HTML" target="_blank">Currículo em HTML</a>
-                    </h3>
-                    <p>Meu primeiro projeto em HTML, apliquei meus primeiros conhecimentos obtivos na página de <a
-                            href="https://roadmap.sh" target="_blank">Roadmaps</a> voltado para Front-End.</p>
-                </div>
-            </article>
+                <!--Projeto 1-->
+                <article class="project-card reveal" data-index="0">
+                    <div class="card-image">
+                        <img src="assets/quiz.png" alt="Quiz para programadores">
+                        <div class="card-overlay">
+                            <a href="https://github.com/gabnuness/Quiz-para-Progamadores" target="_blank" class="overlay-btn">
+                                <i class="fa-brands fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <h3>Quiz para Programadores</h3>
+                        <p>Site criado com os primeiros conhecimentos de HTML e CSS, desenvolvido durante uma aula no YouTube do canal da Rafaella Ballerini.</p>
+                        <div class="card-actions">
+                            <a href="https://github.com/gabnuness/Quiz-para-Progamadores" target="_blank" class="card-link">
+                                GitHub <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://quizpprogramadores.netlify.app" target="_blank" class="card-link card-link--live">
+                                Ver na web <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-            <!--Projeto4-->
-            <article class="box4">
-                <div>
-                    <img src="assets/java.png" alt="Calculadora IMC em Java">
-                    <h3><a href="https://github.com/gabnuness/Calculadora-IMC-Java" target="_blank">Calculadora de IMC
-                            com Jaca</a></h3>
-                </div>
-            </article>
+                <!--Projeto 2-->
+                <article class="project-card reveal" data-index="1">
+                    <div class="card-image">
+                        <img src="assets/rabbitmq.png" alt="RabbitMQ">
+                        <div class="card-overlay">
+                            <a href="https://github.com/gabnuness/Mensageria-RabbitMQ" target="_blank" class="overlay-btn">
+                                <i class="fa-brands fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">RabbitMQ</span>
+                            <!--<span class="tag">Backend</span>-->
+                        </div>
+                        <h3>Sistema de Notificação com RabbitMQ</h3>
+                        <p>Conhecendo a ferramenta RabbitMQ, criei um sistema de notificação assíncrona entre produtor e consumidor.</p>
+                        <a href="https://github.com/gabnuness/Mensageria-RabbitMQ" target="_blank" class="card-link">
+                            Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!--Projeto 3-->
+                <article class="project-card reveal" data-index="2">
+                    <div class="card-image card-image--placeholder">
+                        <img src="assets/cv.jpg" alt="Curriculo em HTML">
+                        <div class="card-overlay">
+                            <a href="https://github.com/gabnuness/Curriculo-em-HTML" target="_blank" class="overlay-btn">
+                                <i class="fa-brands fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                        </div>
+                        <h3>Currículo em HTML</h3>
+                        <p>Meu primeiro projeto em HTML. Apliquei os primeiros conhecimentos obtidos na página de <a href="https://roadmap.sh" target="_blank">Roadmaps</a> voltado para Front-End.</p>
+                        <a href="https://github.com/gabnuness/Curriculo-em-HTML" target="_blank" class="card-link">
+                            Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!--Projeto 4-->
+                <article class="project-card reveal" data-index="3">
+                    <div class="card-image">
+                        <img src="assets/imc.jpg" alt="Calculadora IMC Java">
+                        <div class="card-overlay">
+                            <a href="https://github.com/gabnuness/Calculadora-IMC-Java" target="_blank" class="overlay-btn">
+                                <i class="fa-brands fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">Java</span>
+                        </div>
+                        <h3>Calculadora de IMC em Java</h3>
+                        <p>Aplicação desktop desenvolvida em Java para calcular o Índice de Massa Corporal, praticando conceitos da linguagem.</p>
+                        <a href="https://github.com/gabnuness/Calculadora-IMC-Java" target="_blank" class="card-link">
+                            Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!--Projeto 5-->
+                 <article class="project-card reveal" data-index="3">
+                    <div class="card-image">
+                        <img src="assets/biblioteca.jpg"
+                         alt="Sistema de Biblioteca em Java">
+                        <div class="card-overlay">
+                            <a href="https://github.com/gabnuness/Calculadora-IMC-Java" target="_blank" class="overlay-btn">
+                                <i class="fa-brands fa-github"></i> Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">Java</span>
+                        </div>
+                        <h3>Sistema de Biblioteca em Java</h3>
+                        <p>Sistema de gerenciamento de acervo bibliográfico desenvolvido em Java, com arquitetura em camadas e interface de linha de comando (CLI).</p>
+                        <a href="https://github.com/gabnuness/SysBiblioteca-Java" target="_blank" class="card-link">
+                            Ver projeto <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
-    <footer>
-        <div class="container-final">
-            <h2 id="mensageFinal">Vamos comigo construir algo simples e grandioso</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/_gabnunes._" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    <a href="https://www.linkedin.com/in/gabrielnunes" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="malito:gabnunes.developer@gmail.com">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
+
+    <!--Informações Acadêmicas-->
+    <section id="education">
+        <div class="education-container">
+
+            <div class="section-header reveal">
+                <!--<span class="section-tag">trajetória</span>-->
+                <h2>Formação & <span class="accent-text">Certificações</span></h2>
+                <p class="section-sub">Onde aprendi e o que conquistei pelo caminho.</p>
             </div>
-            <p>&copy; Gabriel Nunes dos Santos - 2026</p>
+
+            <div class="education-grid">
+
+                <div class="edu-column reveal">
+                    <h3 class="edu-column-title">
+                        <i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica
+                    </h3>
+
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-info">
+                            <span class="edu-period">2021 - 2023</span>
+                            <h4 class="edu-title">Ensino Médio</h4>
+                            <p class="edu-institution">Escola Estadual Joaquim Fagundes dos Reis</p>
+                            <!-- <p class="edu-desc">Descrição opcional sobre o curso.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-info">
+                            <span class="edu-period">2025 - Atualmente</span>
+                            <h4 class="edu-title">Ciências da Computação / 3º Semestre</h4>
+                            <p class="edu-institution">Atitus Educação - Campus Santa Terezinha</p>
+                            <p class="edu-desc">Cursando o terceiro nano-degree voltado para organização e abstração na programação.</p>
+                        </div>
+                    </div>
+                <!--Fim do bloco de formação-->
+                </div>
+
+
+                <div class="edu-column reveal reveal-delay">
+                    <h3 class="edu-column-title">
+                        <i class="fa-solid fa-certificate"></i>
+                        Certificações
+                    </h3>
+
+                    <!--Certificação 1-->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-info">
+                            <span class="edu-period">Jun - Jul / 2024</span>
+                            <h4 class="edu-title">English Program - Pre Intermediate Level 4</h4>
+                            <p class="edu-institution">ILAC (International Language Academy of Canada)</p>
+                           <!--<a href="link_certificado" target="_blank" class="edu-link">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>>-->
+                        </div>
+                    </div>
+
+                    <!--Certificação 2-->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-info">
+                            <span class="edu-period">Ago / 2024</span>
+                            <h4 class="edu-title">Montagem e Manutenção de Computador do Zero</h4>
+                            <p class="edu-institution">Udemy / Grupo Happy Hardware Informática</p>
+                           <!--<a href="link_certificado" target="_blank" class="edu-link">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>>-->
+                        </div>
+                    </div>
+
+                    <!--Certificação 3-->
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <div class="edu-info">
+                            <span class="edu-period">Set / 2025</span>
+                            <h4 class="edu-title">Computer Networking Basics: How Computers Communicate</h4>
+                            <p class="edu-institution">IBM SkillsBuild</p>
+                           <!--<a href="LINK_DO_CERTIFICADO" target="_blank" class="edu-link">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>>-->
+                        </div>
+                    </div>
+                    
+                    <!--Aqui acaba as certificações-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-inner reveal">
+            <h2>Grandes soluções nascem de converas simples. <span class="accent-text">Me dá um oi!</span></h2>
+            <p>Aberto a colaborações, projetos e novas conexões.</p>
+            <div class="social-links footer-social">
+                <a href="https://www.instagram.com/_gabnunes._" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabrielnunes" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:gabnunes.developer@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; Gabriel Nunes dos Santos — 2026</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
